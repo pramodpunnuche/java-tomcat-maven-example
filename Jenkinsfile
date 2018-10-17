@@ -17,7 +17,10 @@ pipeline {
                     archiveArtifacts artifacts : '**/*.war'
                 }
                   
-
+        stage ('Deploy Build in Staging Area'){
+            steps{
+ 
+                build job : 'Deploy-StagingArea-Piple'
         
             }
         }
